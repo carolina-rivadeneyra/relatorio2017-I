@@ -1,0 +1,670 @@
+\documentclass[a4paper,12pt]{article}
+
+% Packages
+
+\usepackage{amsmath}
+\usepackage[utf8]{inputenc}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage[font=it, format=hang, skip=0pt]{caption}
+\usepackage{listings}
+\usepackage{setspace}
+\usepackage{float}
+\usepackage{textcomp}
+\usepackage{pdflscape}
+\addtolength{\topmargin}{-2cm}
+\addtolength{\textheight}{2cm}
+\onehalfspacing
+
+% Environment
+
+\title{Relatorio de atividades 3}
+\author{Carolina Rivadeneyra Vera}
+
+\begin{document}
+
+\pagenumbering{gobble}
+\newpage
+\pagenumbering{arabic}
+\pagestyle{plain}
+
+\tableofcontents
+\listoffigures
+\listoftables
+\newpage
+
+\section{\normalsize INTRODUCTION}
+
+The Central Andes of southern Bolivia is a highly seismic region due to the faults present in this area which eventually could generate earthquakes up to 8.5 Mw. Nevertheless most of them are shallow and have low magnitude. In 2013, an earthquake of 5.0 Mw occurred in Santa Cruz de la Sierra, it was followed by five aftershocks registered by the International Center (ISC) and 33 aftershocks registered by the \textit{Observaotio San Calixto (OSC)} in the two months after the mainshock. Distances between epicenters of the aftershocks and the mainshock are up to 34 km, which is greater than expected for an earthquake of this magnitude. Furthermore the uncertainty of the epicenters is around 20 km; this scenario is not suitable for studies looking to determine the seismogenic fault orientation. Using data from South American stations of the international network of the Incorporated Research Institutions for Seismology (IRIS) and the relative location technique, that uses the surface waves (usually the clearest wave in noisy seismograms), the epicenters of five aftershocks of Santa Cruz series were determined in relation the mainshock. This method enabled to achieve epicentral locations with uncertainties smaller than 2 km, distances between the aftershocks and the mainshock are up to 7 km, in accordance with the magnitude of the earthquake. Additionally, using the data of two stations of the OSC network, LPAZ station of the IRIS and the Hypocenter software, the 33 aftershocks registered by the OSC were relocate. The results show a N-S trend of the epicenters and a E-W diving, in agreement with the location and orientation of the Mandeyapecua fault.
+
+
+\newpage
+\section{\normalsize OBJECTIVE}
+\subsection{Main objective}
+Determination of fault plane of the Santa Cruz de la Sierra earthquake of 2013. 
+
+\subsection{Specific objectives}
+\begin{itemize}
+\item Relative location of the five aftershocks registered by the ISC of the Santa Cruz de la Sierra earthquake, by surface waves correlation.
+
+\item Location of the 33 aftershocks registered by the OSC through the Hypocenter software.
+
+\item Study the tensions present in the Santa Cruz region. 
+\end{itemize}
+
+\section{\normalsize MAINSHOCK AND AFTERSHOCKS}
+\subsection{Mainshock}
+On 15th October of 2013 was registered an earthquake of 5.0 mb magnitude, at 20:13:19 UTC (16:13:19 local time) in the Province of Cordillera, Department of Santa Cruz de la Sierra, in Bolivia. The parameters of this event are detailed in the Table \ref{tabela:parametros}. The Figure \ref{fig epicentro} shows the location of the epicenter.
+
+\medskip
+
+\begin{table}[H]
+\begin{center}
+\caption{Parameters of the mainshock}
+\label{tabela:parametros}
+\bigskip
+\doublespacing
+\begin {tabular}{|l|c|c|}
+\hline
+\textbf{Parameters} & \textbf{Value} & \textbf{Uncertainty} \\
+\hline
+Magnitude & 5.0 mb & $\pm$0.066 \\
+Longitude & 63.271$^\circ$W & Not specified \\
+Latitude & 18.503$^\circ$S & Not specified \\
+Depth & 38.2 km & $\pm$5.9 km \\
+Time UTC & 20:13:20 &  - \\
+Fault type & Thrust & - \\ 
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\linewidth]{Epicentro2.png}
+\singlespace
+{\caption{ \small The focal mechanism is from the mainshock, the black square indicates the location of the Santa Cruz de la Sierra city, and the blue dashed line is a Mandeyapecua fault}}
+\label{fig epicentro}
+\end{figure}
+
+\subsection{Aftershocks}
+
+The aftershocks was searched in the International Seismological Center (ISC) catalog in the two months after of the mainshock, taking into account a radio of 50 km around the epicenter, and a depth less of 60 km; because it is necessary to looking for events associated with the mainshock, which occurred in a shallow depth (in the crust). In the search was found five aftershocks, that are detailed in the Table \ref{tabela:Aftershocks ISC}, an in the Figure \ref{fig replicas}.
+
+\begin{table}[H]
+\begin{center}
+\caption{Aftershocks ISC}
+\label{tabela:Aftershocks ISC}
+\doublespacing
+\begin {tabular}{|c|c|c|c|c|c|c|}
+\hline
+\textbf{Event} & \textbf{Date} & \textbf{Time UTC} & \textbf{Longitude} & \textbf{Latitude} & \textbf{Depth} & \textbf{Mag.}\\
+\hline
+Aftershock 1 & 10-15-2013 & 20:15:28 & 63.1740$^\circ$W & 18.3710$^\circ$S & 21.0 km & 5.0 mb\\
+Aftershock 2 & 10-15-2013 & 22:00:29 & 62.9200$^\circ$W & 18.4200$^\circ$S & 10.0 km & 4.4 mb\\
+Aftershock 3 & 10-16-2013 & 08:31:31 & 63.3403$^\circ$W & 18.2317$^\circ$S & 59.0 km & 3.6 mb\\
+Aftershock 4 & 10-21-2013 & 19:54:01 & 63.2700$^\circ$W & 18.4900$^\circ$S & 36.0 km & 4.7 mb\\
+Aftershock 5 & 11-17-2013 & 06:18:23 & 63.2577$^\circ$W & 18.3975$^\circ$S & 47.0 km & 3.2 mb\\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\linewidth]{ReplicasISC.png}
+\singlespace
+\caption{\small The red star represents the mainshock, whereas the green circle represents the aftershocks. It can be observed that the distance between the mainshock and the aftershocks are up to 34 km, this distance is greater than expected for an earthquake of this magnitude}
+\label{fig replicas}
+\end{figure}
+
+According to Wells and Coppersmith (1994), the logarithm of the subsurface rupture length (RLD) has a linear relationship with the magnitude of the earthquake, the equation 1 is valid for events caused by thrust faults.
+
+\begin{equation}
+log (SRL) = -2.42(0.21)+0.58(0.03)*M
+\end{equation}
+
+For the mainshock, whose magnitude was of 5.2 Mw, the size of the rupture is between 1.7 and 9.2 km, therefore the distance between the mainshock and aftershocks should be in this range value. But, how it can be observed in the Figure \ref{fig replicas}, the distance is up to 34 km. 
+
+The \textit{Observatory San Calixto} (OSC) from Bolivia, whose main activity is the monitoring and vigilance of the seismic activity, registered 28 shallow foreshocks before the mainshock, and 33 aftershocks until the 30th October of 2013. They are listed in the Table \ref{tabela:Aftershocks OSC}, an in the Figure \ref{fig replicas OSC}.
+
+\begin{table}[H]
+\begin{center}
+\caption{Aftershocks OSC}
+\label{tabela:Aftershocks OSC}
+\begin {tabular}{|c|c|c|c|c|c|c|}
+\hline
+\textbf{Event} & \textbf{Date} & \textbf{Time UTC} & \textbf{Longitude} & \textbf{Latitude} & \textbf{Depth} & \textbf{Mag.}\\
+\hline
+Aftershock 1 & 10-15-2013 & 20:38:51 & 63.1540$^\circ$W & 18.5120$^\circ$S & 44.0 km & 2.90 mb\\
+Aftershock 2 & 10-15-2013 & 20:42:43 & 62.1660$^\circ$W & 18.5160$^\circ$S & 46.0 km & 2.95 mb\\
+Aftershock 3 & 10-15-2013 & 21:26:07 & 63.1940$^\circ$W & 18.4570$^\circ$S & 45.0 km & 2.76 mb\\
+Aftershock 4 & 10-15-2013 & 21:41:12 & 63.1630$^\circ$W & 18.4730$^\circ$S & 23.0 km & 2.78 mb\\
+Aftershock 5 & 10-15-2013 & 21:59:31 & 63.1910$^\circ$W & 18.4730$^\circ$S & 55.0 km & 4.00 mb\\
+Aftershock 6 & 10-15-2013 & 22:26:43 & 63.1940$^\circ$W & 18.4520$^\circ$S & 53.0 km & 2.61 mb\\
+Aftershock 7 & 10-15-2013 & 22:52:33 & 62.1820$^\circ$W & 18.5200$^\circ$S & 56.0 km & 2.21 mb\\
+Aftershock 8 & 10-15-2013 & 22:57:27 & 63.1680$^\circ$W & 18.5440$^\circ$S & 53.0 km & 2.00 mb\\
+Aftershock 9 & 10-15-2013 & 23:00:15 & 63.1660$^\circ$W & 18.4970$^\circ$S & 43.0 km & 2.63 mb\\
+Aftershock 10 & 10-15-2013 & 23:19:24 & 63.1760$^\circ$W & 18.4580$^\circ$S & 57.0 km & 3.09 mb\\
+Aftershock 11 & 10-15-2013 & 23:32:57 & 63.1630$^\circ$W & 18.4900$^\circ$S & 40.0 km & 2.56 mb\\
+Aftershock 12 & 10-16-2013 & 00:20:53 & 62.2120$^\circ$W & 18.4630$^\circ$S & 47.0 km & 2.50 mb\\
+Aftershock 13 & 10-16-2013 & 00:34:34 & 63.1600$^\circ$W & 18.5000$^\circ$S & 45.0 km & 2.46 mb\\
+Aftershock 14 & 10-16-2013 & 00:42:26 & 63.1840$^\circ$W & 18.5070$^\circ$S & 52.0 km & 2.28 mb\\
+Aftershock 15 & 10-16-2013 & 00:50:31 & 63.1760$^\circ$W & 18.4790$^\circ$S & 49.0 km & 2.98 mb\\
+Aftershock 16 & 10-16-2013 & 02:44:47 & 63.1580$^\circ$W & 18.4640$^\circ$S & 51.0 km & 2.67 mb\\
+Aftershock 17 & 10-16-2013 & 02:54:23 & 62.1730$^\circ$W & 18.4870$^\circ$S & 29.0 km & 2.99 mb\\
+Aftershock 18 & 10-16-2013 & 02:59:40 & 63.1620$^\circ$W & 18.4700$^\circ$S & 54.0 km & 2.55 mb\\
+Aftershock 19 & 10-16-2013 & 03:53:35 & 63.1740$^\circ$W & 18.5230$^\circ$S & 50.0 km & 3.42 mb\\
+Aftershock 20 & 10-16-2013 & 04:01:53 & 63.1440$^\circ$W & 18.4940$^\circ$S & 46.0 km & 3.37 mb\\
+Aftershock 21 & 10-16-2013 & 06:13:16 & 63.1780$^\circ$W & 18.4470$^\circ$S & 55.0 km & 2.74 mb\\
+Aftershock 22 & 10-16-2013 & 06:54:21 & 62.1460$^\circ$W & 18.5280$^\circ$S & 41.0 km & 2.84 mb\\
+Aftershock 23 & 10-16-2013 & 08:06:52 & 63.1850$^\circ$W & 18.4580$^\circ$S & 52.0 km & 2.36 mb\\
+Aftershock 24 & 10-16-2013 & 08:31:22 & 63.1420$^\circ$W & 18.4720$^\circ$S & 34.0 km & 3.71 mb\\
+Aftershock 25 & 10-16-2013 & 08:48:43 & 63.1960$^\circ$W & 18.4610$^\circ$S & 58.0 km & 3.02 mb\\
+Aftershock 26 & 10-16-2013 & 09:50:42 & 63.1890$^\circ$W & 18.4460$^\circ$S & 43.0 km & 2.37 mb\\
+Aftershock 27 & 10-16-2013 & 10:38:00 & 62.1780$^\circ$W & 18.4800$^\circ$S & 51.0 km & 3.11 mb\\
+Aftershock 28 & 10-16-2013 & 11:41:35 & 63.1330$^\circ$W & 18.5100$^\circ$S & 56.0 km & 2.59 mb\\
+Aftershock 29 & 10-16-2013 & 12:53:04 & 63.1710$^\circ$W & 18.4740$^\circ$S & 40.0 km & 3.21 mb\\
+Aftershock 30 & 10-16-2013 & 13:34:53 & 63.1750$^\circ$W & 18.5120$^\circ$S & 48.0 km & 3.41 mb\\
+Aftershock 31 & 10-21-2013 & 19:53:57 & 63.1700$^\circ$W & 18.5300$^\circ$S & 59.0 km & 4.57 mb\\
+Aftershock 32 & 10-22-2013 & 08:09:53 & 62.1600$^\circ$W & 18.5600$^\circ$S & 59.0 km & 3.00 mb\\
+Aftershock 33 & 10-22-2013 & 13:35:50 & 63.1500$^\circ$W & 18.5700$^\circ$S & 45.0 km & 2.74 mb\\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\linewidth]{ReplicasOSC.png}
+\singlespace
+\caption{\small The red star represents the mainshock, whereas the green circle represents the aftershocks. It can be observed that the distance between the mainshock and the aftershocks are approximately 10 km, this distance is according with the expected for an earthquake of this magnitude, however the events are scattered among themselves}
+\label{fig replicas OSC}
+\end{figure}
+
+\newpage
+\section{\normalsize GEOLOGICAL SETTINGS}
+\subsection{Geology of the area}
+ 
+The Andes of Bolivia define an active Cordillera-type orogen where the tectonics are associated with the subduction of the oceanic Nazca Plate under the continental South American Plate. They are located above a 30° east-dipping portion of the Nazca plate, along variations in the geometry of the subduction of the Nazca slab have resulted in different styles of crustal deformation.
+
+The main characteristics of the Bolivian Andes are:
+
+\begin{itemize}
+\item The presence of a wide and very subsident (6 to 15 km deep) Tertiary sedimentary basin, which forms a high plateu, the Altiplano, and have and average elevation of 3800 meters.
+\item The elbow shape of the mountain range, which is referred to as the Bolivian Orocline.
+\item The Cenozoic and Quaternary volcanic arc, that is active.
+\item A thick crust, between 55 and 75 km.
+\item A high amount of topographic relief within and across the range
+\end{itemize}
+
+The Central Andes of Bolivia are the wider part of the Andean chain (300-600 km),  the Province of Cordillera is located in the Department of Santa Cruz de la Sierrra in Bolivia; in the eastern and has an average height of 4000 m.a.s.l, and three orographic areas:
+
+\begin{itemize}
+\item Subandean belt in the western area, it represents the last ripples of the Andes.
+
+\item The plain with a almost plain topography or slightly wavy, the relief has a very slow slope and because of that the rivers have bend ways.
+
+\item The shield of \textit{Guaporé} is characterized by a relief a little wave, depressions almost flat and large areas.
+
+\end{itemize}
+
+The high topography that defines the eastern flank of the Andes is composed by folded and faulted  Paleozoic rocks intruded by Triassic and Tertiary granitoid bodies, is predominantly the oldest stratigraphic section of the orogen with Ordovician age and locally older rocks outcropping. Significant upper-crustal shortening in this area ended before 10 Ma extending the active deformation from eastward into the Subandean Zone, which is located in the transition from the high elevations of the Central Andean Plateu to the foreland plains through synclinal basins separated bye thrust-faulted anticlines (Ward, Porter, Zandt, Beck, Wagner, Minaya and Tavera, 2013).
+
+\medskip
+
+In Bolivia there are a totally of fourteen fault, whose was detailed in the Table X. The eastern area is characterized by the presence of thrust faults with N-S orientation, also is observed soft folds, being the most important the thrust fault of \textit{Mandeyapecua}, that have an extension of 486 km, and it is probably that this structure could be cut by a slip fault (OSC, 2013).
+
+\begin{landscape}
+\begin{table}[H]
+\begin{center}
+\caption{Stations used}
+\label{tabela:Bolivia Faults}
+\bigskip
+\begin {tabular}{|c|c|c|c|c|c|c|}
+\hline
+\textbf{Name} & \multicolumn{3}{c|}{\textbf{Fault Geometry}} & \textbf{Type} & \textbf{Slip Rate} & \textbf{Mos recent Movement}\\\cline{2-4}
+   & \textbf{Lenght} & \textbf{Strike} & \textbf{Dip} & & & \\
+\hline
+Achacachi  & 29.9 km & -57.4$^\circ$ & Unknown & Normal & Unknown & Quaternary (<1.6 Ma)\\
+Peñas  & 53.6 km & -46.3$^\circ$ & 70$^\circ$NE & Normal & Unknown & <1.5 ka)\\
+Kenko  & 11.4 km & -35.7$^\circ$ & 75$^\circ$SE & Normal-sinistral & <0.2 mm/year & Quaternary (<1.6 Ma)\\
+LLojeta  & 12.7 km & -50.2$^\circ$ & 75$^\circ$NE & Normal-dextral & Unknown & Quaternary (<1.6 Ma)\\
+Amachuma  & 40.0 km & -24.6$^\circ$ & 70$^\circ$E & Normal-sinistral & <0.2 mm/year & Quaternary (<1.6 Ma)\\
+Quebrada  & 7.7 km & -70.2$^\circ$ & 85$^\circ$S & Normal-dextral & Unknown & Quaternary (<1.6 Ma)\\
+Escoma  & 26.6 km & -43.2$^\circ$ & Unknown (W) & Normal & Unknown & Quaternary (<1.6 Ma)\\
+Viacha  & 16.7 km & 31.5$^\circ$ & Unknown (SE) & Normal & Unknown & Quaternary (<1.6 Ma)\\
+Ayo Ayo  & 14.6 km & -53.6$^\circ$ & 70$^\circ$N & Normal-dextral & Unknown & Quaternary (<1.6 Ma)\\
+Cuenca de Charaña  & 26.7 km & -37.3$^\circ$ & Unknown (E) & Normal & Unknown & Quaternary (<1.6 Ma)\\
+Tunari  & 81.0 km & -72.0$^\circ$ & 60$^\circ$S & Normal-dextral & Unknown & Quaternary (<1.6 Ma)\\
+Tarija  & 54.4 km & 22.6$^\circ$ & 70$^\circ$W & Normal & Unknown & Quaternary (<1.6 Ma)\\
+Beni  & 91.1 km & 4.5$^\circ$ & unknown & Normal & Unknown & Quaternary (<1.6 Ma)\\
+Mandeyapecua  & 486.6 km & -6.7$^\circ$ & 60$^\circ$W & Reverse & Unknown & Quaternary (<1.6 Ma)\\
+\hline   
+\end{tabular}
+\end{center}
+\end{table}
+\end{landscape}
+
+
+\subsection{Bolivia seismicity}
+The subduction of the Nazca plate beneath the South American plate has caused the rise of the Andes hills, also it could generate earthquakes up to 8.5 Mw.along the west side of the Andes; however in the east side there is no real security about the seismic potential (Brooks, 2010). The seismic activity in the Bolivia region has been studied by the OSC, recognizing two seismogenic sources in the area. 
+
+\begin{enumerate}
+\item The crust, associated with continental deformation, with this source are considered the earthquakes with depth until 75 km (shallow earthquakes), which is the crustal thickness in Bolivia. The potentially active faults are related with this source, those faults probably caused seismic activity in the Holocene and in the Quaternary period.      
+\medskip
+\item The subduction, in this group are the earthquakes that could have a magnitude up to 8 Mw, but they do not cause damage and are felt slightly in the epicenter, due to the great depth of them. The seismogenic activity of this source does not continue because there are not earthquakes between 350 and 500 km depth (intermediate earthquakes), the activity becomes manifest in depths between 500 and 700 km (deep earthquakes).
+\end{enumerate}   
+
+According to the OSC, in the Department of \textit{Santa Cruz de la Sierra} was registered earthquakes since 1929, the area wherr occurred this events are located in the plain Chaco Beniano, which is in the easternmost of the bolivian Andes, being a large floodplain and it constitutes the northern subandenan deformation belt. Further, the most of the earthquakes in this area are shallow like is shown in the Figure \ref{fig sismicidade}.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\linewidth]{Sismicidade.png}
+\singlespace
+\caption{\small Seismicity in Bolivia since 1625 until 2010. The shallow earthquakes are represented by red circle, the intermediate earthquakes by green circles and the deep earthquakes by blue circles, in the western the most of the events have an intermediate depth, while in the eastern most of then are shallow (OSC, 2012).}
+\label{fig sismicidade}
+\end{figure}
+
+\newpage 
+\section{\normalsize METHODOLOGY}
+
+\subsection{ Relative location}
+
+The precision in the locate of epicenters is very important for studies like determining fault orientation, detecting epicenter migration, developing the best model of regional velocity,and others. However, generally the determination of epicenters have uncertainties over 20 km, due to noise in the seismograms and the regional stations that are used are not close enough. In order to obtain errors less than 5 km it is required more than 10 stations closer than 200 km (m et al, 2004)
+
+\medskip
+
+Generally the most clear waves in the noise seismograns are the surface waves, due to have amplitudes grater than body waves, so it is easier to recognize in the seismograms, although those have a slow signal in relation to noise (Hermann and Ammon, 2002). Rayleigh waves are distinguished in the vertical and radial component of seismograms; and for regional distances, between 300 and 2000 km, is a characteristic phase (Chiu and Synder, 2014). The window of group velocity of the Rayleigh wave is from 3.0 to 3.6 km/s, and for continental lithosphere paths are the dominant frequency; generally, is greater than 0.05 Hz (Gallegos et al, 2014). Relative Rayleigh wave time shifts can be measured with a precision on the order of 1 to 2 seconds, moreover the low propagation velocities of surface waves provide a substantial sensitivity to location (Cleveland and Ammon, 2013).
+
+\medskip
+
+In order to do a relative locate of aftershocks it is necessary to correlate the similar waveform of the surfaces waves of the events relative to one of reference, knowing that the waveform similarity is high when it have a similar way. As the Rayleigh waves are more clear in the vertical component,then only it worked with this component.
+
+\medskip
+
+First, all the seismograms were filtered by the DOMFT software in a period between 10 and 70 seconds, and in a velocity range of 2 and 4.8 km/s; also a technique of DOMFT filter uses a Gaussian filter which has a central frequency that depends of alpha parameter ($\alpha$). As higher is $\alpha$, the filter is more selective; but this tends to make the filtered signal look like a sinusoid (single frequency) with greater duration, worsening the maximum resolution of the envelope. The value of $\alpha$ depends of the distance between the events and the station, the values recommended for this parameter are shown in the Table \ref{tabela:values alpha}
+
+\begin{table}[H]
+\begin{center}
+\caption{Value of the parameter alpha}
+\label{tabela:values alpha}
+\doublespacing
+\begin {tabular}{|c|c|}
+\hline
+\textbf{Distance} & \textbf{$\alpha$}\\
+\hline
+1000 km & 25 \\
+2000 km & 50 \\
+4000 km & 100\\
+8000 km & 200\\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+
+After to filter the seismograms by the software DOMFT, was recognized that the frequency that presents the most energy density in all of them was about 0.05 Hz (20 seconds), and this this frequency was defined to do the correlate.
+
+A program was developed by the Seismology Center of the University of Sao Paulo (USP) to correlate automatically the waves, only it is necessary to choose an event as reference and define some parameters like: phase, filter corner-frequencies, time window, and maximum lag; the program gives the highest correlation between the target and reference event, also updating the header of the seismogram. The values used to do the correlation are specified in the Table \ref{tabela:Parameters correlate}
+
+\begin{table}[H]
+\begin{center}
+\caption{Parameters used in the wave correlation}
+\label{tabela:Parameters correlate}
+\doublespacing
+\begin {tabular}{|c|c|}
+\hline
+\textbf{Parameter} & \textbf{Value}\\
+\hline
+Phase  & Rayleigh \\
+Component & Vertical (Z) \\
+Filter corner & 0.04-0.06\\
+Time window & 3 segundos \\
+Maximum lag & 3 segundos \\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+
+After the waveform correlation, it is necessary at least one event as reference (the same event which was reference to do the correlation), and find out the difference in travel time of the Rayleigh wave, in the phase around of 0.05 Hz (20 seconds), between the target and the reference event, and finally determine the distance of the target in relation to the reference event. The Figure \ref{fig relative location} shows the basis of this technique.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\linewidth]{Relloc.png}
+\singlespace
+\caption{\small Showing some of the parameters involved in the relative location technique, considering that the distance (d) between the target and reference event is smaller than the distance to the station.}
+\label{fig relative location}
+\end{figure}
+
+Considering the state that the distance between the station and the events is grater than the distance between the events,it can be assumed that the angle $\beta$ is zero, and the ray paths of the two events are parallel, then the difference in travel time between the reference and the target event could be represented by the Equation 2 (Ciardelli et al, 2014).
+\medskip
+\begin{equation}
+T_{t} - T_{r}= A{0}-\frac{d*cos(A_{s}-A_{t})}{V_{ap}}
+\end{equation}
+
+Where:
+\begin{itemize}
+\item $T_{t}$ is the travel time of the Rayleigh wave, released by the target event.
+\item $T_{r}$ is the Rayleigh travel time of the reference event.
+\item $A_{0}$ a correction for the target event origin time.
+\item $A_{s}$ the station azimuth.
+\item $A_{t}$ the target azimuth in relation to the reference event.
+\item $V_{ap}$ the apparent velocity of the Rayleigh wave.
+\end{itemize}
+
+With the equation 2, it is possible to calculate unknown parameters like $A_{0}$, $d$ and $A_{t}$, through the theoretical curve of time differences ($T_{t}$-$T_{r}$) versus station azimuth ($A_{s}$). For this purpose, it set a phase velocity of 3,4 km/s; this value was determined by Ward et al (2013) in their study they constructed Rayleigh wave phase velocity maps in the period range of 8-40 seconds in the Central Andes. In the Figure \ref{fig Rayleigh velocity} shows a phase velocity of the Rayleigh waves in this area. 
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\linewidth]{RPvelocity.png}
+\singlespace
+\caption{\small Rayleigh wave face velocity maps for 10, 20, 30 and 40 seconds. It be used the period of 20 seconds to perform the relative locate, considering that the all of events occurred around of -18$^\circ$ latitude and -63 $^\circ$ longitude.}
+\label{fig Rayleigh velocity}
+\end{figure}
+
+\subsubsection{Data}
+
+To do a relative location of the aftershocks is needed the seismograms of the nearest stations, preferentially those are located within a distance of 2000 km, due to in this distance the surface waves are dominant; in the Table \ref{tabela:estacoes} and Figure \ref{fig stations ISC} are shown the stations considered to the analysis.
+
+\begin{table}[H]
+\begin{center}
+\caption{Stations used}
+\label{tabela:estacoes}
+\bigskip
+\begin {tabular}{|c|c|c|c|c|}
+\hline
+\textbf{Network} & \textbf{Stations} & \multicolumn{3}{c|}{\textbf{Localization}} \\\cline{3-5}
+   &      &\textbf{Longitude} & \textbf{Latitude} & \textbf{País} \\
+\hline
+BL  & AQDB & 55.70$^\circ$W & 20.48$^\circ$S & Brazil\\
+    & BSCB & 44.76$^\circ$W & 21.00$^\circ$S & Brazil\\
+    & CLDB & $^\circ$W & $^\circ$S & Brazil\\
+    & CNLB & $^\circ$W & $^\circ$S & Brazil\\
+    & CPSB & $^\circ$W & $^\circ$S & Brazil\\
+    & ITAB & 52.34$^\circ$W & 27.31$^\circ$S & Brazil\\
+    & PEXB & $^\circ$W & $^\circ$S & Brazil\\
+    & PLTB & $^\circ$W & $^\circ$S & Brazil\\
+\hline
+BR & ARAG & $^\circ$W & $^\circ$S & Brazil\\
+\hline
+G  & SPB & 47.43$^\circ$W & 23.59$^\circ$S & Brazil\\
+   & PEL & 70.67$^\circ$W & 33.14$^\circ$S & Chile\\
+\hline
+GT & CPUP & 57.33$^\circ$W & 26.33$^\circ$S & Paraguay\\
+   & PLCA & 70.55$^\circ$W & 40.73$^\circ$S & Chile\\
+   & LPAZ & 68.13$^\circ$W & 16.29$^\circ$S & Bolivia\\
+\hline
+II & NNA & 76.84$^\circ$W & 11.99$^\circ$S & Peru\\
+\hline
+IU & LVC & 68.91$^\circ$W & 22.61$^\circ$S & Chile\\
+   & OTAV & $^\circ$W & $^\circ$S & Ecuador\\
+   & PAYG & $^\circ$W & $^\circ$S & Ecuador\\
+   & SAML & 63.18$^\circ$W & 8.95$^\circ$S & Brazil\\
+\hline   
+\end{tabular}
+\end{center}
+\end{table}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\linewidth]{Estaciones.jpeg}
+\singlespace
+\caption{\small Station used to do the relative location of the events. The distance between the mainshock epicenter and the nearest station is more than 200 km}
+\label{fig stations ISC}
+\end{figure}
+
+\subsection{Location using Hypocenter Software}
+
+It was not possible to locate the aftershocks registered by the OSC with the relative location technique, because was impossible to recognize the Rayleigh wave in most of the sesimograms. In order to locate those events it was used the arrivals of P ans S waves. At first was correlate the P and S waves, in the same way to was correlated the Rayleigh wave, and it was used the Hypocenter software developed by the SEISAN, to locate the epicenters of the events, taking into account the standard velocity model of the region developed by Masson, Dorbath, Martinez, and Carlier (2000), shown in the Table \ref{tabela:velocity model}
+
+\medskip
+
+\begin{table}[H]
+\begin{center}
+\caption{Parameters used in the wave correlation}
+\label{tabela:velocity model}
+\doublespacing
+\begin {tabular}{|c|c|c|}
+\hline
+\textbf{Layer} & \textbf{Depth} & \textbf{Average Vp (km/s)}\\
+\hline
+1  & 0 & 5.00 \\
+2  & 30 & 6.00 \\
+3  & 60 & 6.80 \\
+4  & 80 & 8.00 \\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+
+\subsubsection{Data}
+
+\medskip
+
+The data used to locate the aftershocks by the Hypocenter software were of three station, two of them from the national network of Bolivia, operated by the OSC; and the last one from the LPAZ stations operated by the IRIS. The Table \ref{tabela:est OSC} and Figure \ref{fig est.osc} show the information of those stations.
+
+\begin{table}[H]
+\begin{center}
+\caption{Stations used}
+\label{tabela:est OSC}
+\bigskip
+\begin {tabular}{|c|c|c|c|}
+\hline
+\textbf{Stations} & \multicolumn{3}{c|}{\textbf{Localization}} \\\cline{2-4}
+  &\textbf{Longitude} & \textbf{Latitude} & \textbf{País} \\
+\hline
+LPAZ  & 68.13$^\circ$W & 16.29$^\circ$S & Bolivia\\
+MOC   & 65.64$^\circ$W & 21.25$^\circ$S & Bolivia\\
+SIV   & 61.07$^\circ$W & 15.99$^\circ$S & Bolivia\\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+
+\medskip
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\linewidth]{EstOSC.png}
+\singlespace
+\caption{\small Station used to do the relative location of the events registered by the OSC. The distance between the mainshock epicenter and the nearest station is more than 200 km}
+\label{fig Est OSC}
+\end{figure}
+
+\newpage
+\section{\normalsize RESULTS}
+\subsection{Relative location}
+
+The program which was used to do the relative location gives the following values, all of them with their uncertainties:
+
+\begin{itemize}
+\item $A_{0}$: A origin time correction of the target event.
+\item $A_{t}$: The azimuth of the target event relative to the reference event.
+\item Distance (d): The distance between the target and reference event.
+\item Longitude, and latitude of the locate event. 
+\end{itemize}
+
+In the Table \ref{tabela:result relative location} are shown the values obtained after the relative location, and the Figure \ref{fig Rep1},  \ref{fig Rep2}, \ref{fig Rep3}, \ref{fig Rep4}, \ref{fig Rep5} show the fitted curve for relative location for each aftershock. Finally, the Figure \ref{fig aftershocks locate ISC} shows the finale localization of the events located.
+
+\begin{landscape}
+\begin{table}[H]
+\begin{center}
+\caption{Result of the relative location}
+\label{tabela:result relative location}
+\doublespacing
+\begin {tabular}{|c|c|c|c|c|c|}
+\hline
+\textbf{Event} & \multicolumn{3}{c|}{\textbf{Parameters}} & \multicolumn{2}{c|}{\textbf{Localization}} \\\cline{2-6}
+ &\textbf{$A_{0}$} & \textbf{Distance} & \textbf{$A_{t}$}  &\textbf{Longitude} & \textbf{Latitude} \\
+\hline
+Aftershock 1 & 2.936$\pm$0.355 & 6.680$\pm$1.967 & 358$\pm$15& -63.19821$^\circ\pm$0.00781 & -18.43391$^\circ\pm$0.02228\\
+Aftershock 2 & 5.058$\pm$0.253 & 6.585$\pm$0.397 & 352$\pm$15& -63.20470$^\circ\pm$0.00529 & -18.43530$^\circ\pm$0.00361\\
+Aftershock 3 & -5.422$\pm$0.300 & 5.519$\pm$0.527 & 355$\pm$15& -63.20084$^\circ\pm$0.00733 & -18.44094$^\circ\pm$0.00528\\
+Aftershock 4 & -1.580$\pm$0.227 & 6.293$\pm$0.491 & 172$\pm$9.1& -63.18769$^\circ\pm$0.00833 & -18.55009$^\circ\pm$0.00497\\
+Aftershock 5 & -4.377$\pm$0.215 & 5.083$\pm$0.089 & 14$\pm$15& -63.18433$^\circ\pm$0.000701 & -18.44961$^\circ\pm$0.01052\\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+\end{landscape}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\linewidth]{Rep1.png}
+\singlespace
+\caption{\small Fitted curve for the relative location between the mainshock and the aftershock 1, it can see that only a few stations was used to this location, because this aftershock occurred two minutes after the mainshock and the signal of both events are mixed in many seismograms, being so difficult recognize the Rayleigh wave in the target event.}
+\label{fig Rep1}
+\end{figure}
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\linewidth]{Rep2.png}
+\singlespace
+\caption{\small Fitted curve for the relative location between the mainshock and the aftershock 2, it can observe that the delay time fits well to the curve.}
+\label{fig Rep2}
+\end{figure}
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\linewidth]{Rep3.png}
+\singlespace
+\caption{\small Fitted curve for the relative location between the mainshock and the aftershock 3.}
+\label{fig Rep3}
+\end{figure}
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\linewidth]{Rep4.png}
+\singlespace
+\caption{\small Fitted curve for the relative location between the mainshock and the aftershock 4.}
+\label{fig Rep4}
+\end{figure}
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\linewidth]{Rep5.png}
+\singlespace
+\caption{\small Fitted curve for the relative location between the mainshock and the aftershock 5, it can be observe that the delay times does not fit very well with the curve, because this aftershock has a low magnitude and presents a low the signal-noise ratio. }
+\label{fig Rep5}
+\end{figure}
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\linewidth]{reloc.png}
+\singlespace
+\caption{\small Show a final localization of the aftershocks, it can see that the distance between the mainshock and any aftershock are less than 10 km, besides the location of the events shows a N-S trend, agreement to the orientation of the Mandeyaecua fault.}
+\label{fig aftershocks locate ISC}
+\end{figure}
+
+\subsection{Location using Hypocenter software}
+
+The location of the aftershocks through a software Hypocenter gives the results shown in the Table X, with this method, also it can be obtained the event depth, The Figure \ref{fig aftershocks locate} presents the location of the aftershocks, and the Figure X shows the depth profile of the events. 
+
+\begin{table}[H]
+\begin{center}
+\caption{Result of the location through Hypocenter software}
+\label{tabela:result relative location}
+\begin {tabular}{|c|c|c|c|}
+\hline
+\textbf{Event} &\textbf{Longitude} & \textbf{Latitude} & \textbf{Depth}\\
+\hline
+Aftershock 1 & -63.236$^\circ$ & -18.478$^\circ$ & 58.8 km\\
+Aftershock 2 & -63.229$^\circ$ & -18.485$^\circ$ & 52.3 km\\
+Aftershock 3 & -63.216$^\circ$ & -18.464$^\circ$ & 10.3 km\\
+Aftershock 4 & -63.208$^\circ$ & -18.460$^\circ$ & 17.6 km\\
+Aftershock 5 & -63.247$^\circ$ & -18.430$^\circ$ & 55.0 km\\
+Aftershock 6 & -63.263$^\circ$ & -18.430$^\circ$ & 44.5 km\\
+Aftershock 7 & $^\circ$ & $^\circ$ & 4 km\\
+Aftershock 8 & $^\circ$ & $^\circ$ & 4 km\\
+Aftershock 9 & -63.202$^\circ$ & -18.509$^\circ$ & 49.2 km\\
+Aftershock 10 & -63.241$^\circ$ & -18.438$^\circ$ & 43.9 km\\
+Aftershock 11 & -63.240$^\circ$ & -18.497$^\circ$ & 40.0 km\\
+Aftershock 12 & -63.225$^\circ$ & -18.492$^\circ$ & 55.2 km\\
+Aftershock 13 & -63.260$^\circ$ & -18.462$^\circ$ & 36.8 km\\
+Aftershock 14 & $^\circ$ & $^\circ$ & 4 km\\
+Aftershock 15 & -63.224$^\circ$ & -18.454$^\circ$ & 24.3 km\\
+Aftershock 16 & -63.222$^\circ$ & -18.432$^\circ$ & 49.2 km\\
+Aftershock 17 & -63.208$^\circ$ & -18.451$^\circ$ & 31.7 km\\
+Aftershock 18 & -63.220$^\circ$ & -18.471$^\circ$ & 39.7 km\\
+Aftershock 19 & -63.227$^\circ$ & -18.489$^\circ$ & 31.2 km\\
+Aftershock 20 & $^\circ$ & $^\circ$ & 4 km\\
+Aftershock 21 & -63.227$^\circ$ & -18.436$^\circ$ & 17.8 km\\
+Aftershock 22 & -63.245$^\circ$ & -18.506$^\circ$ & 24.9 km\\
+Aftershock 23 & $^\circ$ & $^\circ$ & 4 km\\
+Aftershock 24 & -63.262$^\circ$ & -18.410$^\circ$ & 35.3 km\\
+Aftershock 25 & -63.238$^\circ$ & -18.432$^\circ$ & 26.8 km\\
+Aftershock 26 & -63.265$^\circ$ & -18.440$^\circ$ & 44.9 km\\
+Aftershock 27 & -63.216$^\circ$ & -18.467$^\circ$ & 24.6 km\\
+Aftershock 28 & -63.243$^\circ$ & -18.511$^\circ$ & 37.7 km\\
+Aftershock 29 & -63.230$^\circ$ & -18.493$^\circ$ & 60.0 km\\
+Aftershock 30 & -63.210$^\circ$ & -18.483$^\circ$ & 5.1 km\\
+Aftershock 31 & -63.206$^\circ$ & -18.500$^\circ$ & 53.7 km\\
+Aftershock 32 & -63.236$^\circ$ & -18.497$^\circ$ & 42.6 km\\
+Aftershock 33 & -63.239$^\circ$ & -18.496$^\circ$ & 52.5 km\\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\linewidth]{hypo2.png}
+\singlespace
+\caption{\small Location of the aftershocks through Hypocenter software.}
+\label{fig aftershocks locate}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\linewidth]{profile.jpg}
+\singlespace
+\caption{\small Depth profile of the OSC aftershocks located through by the Hypocenter software, it can be observed a trend to E-W dip.}
+\label{fig depth}
+\end{figure}
+
+\newpage
+\section{\normalsize DISCUSSION}
+\subsection{Relative location}
+
+The relative location of the five aftershocks registered by the ISC are agree with the theory, regarding the distance (Wells and Coppersmith, 1994), less than 9 kilometers. Also the uncertainties of all the parameters calculated by this technique are low in relation with them.
+\medskip
+Respect the aftershock 1, the fitted curve is not very good because this event occurred two minuter after the mainshock, so the seismogram presents superposition of waves of the both events, being so difficult recognize the Rayleigh waves of the aftershock. For this reason the stations used to do the relative location are limited, in this case was used only eight stations of the 19 considered, and and consequently the uncertainties are the greatest.
+\medskip
+The relative locate of the aftershocks 2, 3 and 4 are the best fitted with the curve of the equation 1, it is due this aftershocks present a high magnitude, then the relation signal-noise is better and have more data from the stations, using the signal of all, or almost all if the stations considered.
+\medskip
+The aftershock 5 was the lowest magnitude event, presents a slow signal-noise ratio and more difficult to recognize the Rayleigh phase, especially in the stations most remote, because of that it can be observed that the delay time observed of the stations does not fitted good to the theoretical curve.
+
+\subsection{Location with Hypocenter}
+
+Even the original epicenters of the aftershocks are not very spaced between them, they are some distantly from the Mandeyapecua fault. After the location using the Hypocenter software, the epicenters was located nearest to the fault, and the distance between them are less than 10 km.
+\medskip
+The Hypocenter works with the arrivals of the P and S waves, and it is necessary to have several stations in order to obtain the best results, in this case it only works with three stations, due the low magnitude of the events are not possible identify the arrivals in stations more remote.
+\medskip
+One advantage of using this software is that it is possible to determine the depth of the events, and with this data establish the possible dip of the fault, that is diving E-W.
+\medskip
+
+\newpage
+\section{\normalsize CONCLUSIONS}
+
+The relative location of the five aftershocks registered by the ISC show a trend N-S of the Mandeyapecua fault, in accordance with the focal mechanism shown by the ISC. The location of the 33 aftershocks registered by the OSC also show the same trend for the fault. This confirm the orientation of the Mandeyapecua fault.
+
+The depth profile of the events show a diving E-W of the fault, demonstrating the the fault plane of the mainshock was....
+
+
+
+\newpage
+\section{\normalsize REFERÊNCIAS BIBLIOGRÁFICAS}
+
+
+
+
+
+
+
+\end{document}

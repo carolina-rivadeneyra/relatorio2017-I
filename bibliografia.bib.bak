@@ -1,0 +1,581 @@
+@Article{Kanamori,
+author = {Zhu, L. and Kanamori, H.},
+title = {Moho depth variation in Southern {C}alifornia from teleseismic receiver functions},
+journal = {Journal of Geophysical Research},
+year = {2000},
+OPTkey = {•},
+volume = {105},
+OPTnumber = {•},
+pages = {2969-2980},
+month = {Frebruary},
+OPTnote = {•},
+OPTannote = {•}
+}
+
+@Article{Ryan,
+author = {Ryan, J. and Beck, S. and Zandt, G. and Lara, W. and Minaya, E. and Tavera, H.},
+title = {Central Andean crustal strucutre from receiver function analysis},
+journal = {Tectonophysics},
+year = {2016},
+OPTkey = {•},
+volume = 682,
+pages = {120-133}
+}
+
+@Article{Hazarika,
+author = {Hazarika, D. and Arora, B. and Chandan, B.},
+title = {Crustal structure and deformation in the northeast India-Asia collision zone: constraints from receiver function analysis},
+journal = {Geophysical Journal International},
+year = {2012},
+OPTkey = {•},
+volume = {188},
+OPTnumber = {•},
+pages = {737-749},
+OPTmonth = {•},
+OPTnote = {•},
+OPTannote = {•}
+}
+
+@Article{Bonatto,
+author = {Bonatto, L. and Martin, S. and Gallart, J. and Morales, J.},
+title = {Studying the 410-km and 660-km discontinuities beneath Spain and Morocco through detection of P-to-S conversions},
+journal = {Geophysical. Journal International},
+year = {2013},
+OPTkey = {•},
+volume = {194},
+OPTnumber = {•},
+pages = {920-935},
+OPTmonth = {•},
+OPTnote = {•},
+OPTannote = {•}
+}
+
+@Article{Hersh,
+author = {Hersh, G. and Sheehan, A. and Dueker, K. and Molnar, P.},
+title = {Receiver functions in the western United States, with implications for upper mantle structure and dynamics},
+journal = {Journal of Geophysical Research},
+year = {2003},
+OPTkey = {•},
+volume = {108},
+number = {B5},
+OPTaddress = {•},
+OPTmonth = {•},
+OPTnote = {•},
+OPTannote = {•}
+}
+
+@Article{Ligorria,
+author = {Ligorr\'ia, J. and Ammon, C},
+title = {Iterative Deconvolution and Receiver-Function Estimation},
+journal = {Bulletin of the Seismological Society of America},
+year = {1999},
+OPTkey = {•},
+volume = {89},
+number = {5},
+pages = {1395-1400},
+month = {October},
+OPTnote = {•},
+OPTannote = {•}
+}
+
+@Article{Assumpcao,
+author = {Assumpcao, M. and Feng, Mei. and Tassara, A. and Juli\'a, J.},
+title = {Models of crustal thickness for South America from seismic refraction, receiver functions and surface wave tomography},
+journal = {Tectonophysics},
+year = {2013},
+OPTkey = {•},
+volume = {609},
+OPTnumber = {•},
+pages = {82-96},
+OPTmonth = {•},
+OPTnote = {•},
+OPTannote = {•}
+}
+
+@Article{Song,
+author = {Song, A. and Helmberger, V. and Grand, S.},
+title = {Low-velocity zone atop the 410-km seismic discontinuity in the northwestern United States},
+journal = {Letters to nature},
+year = {2004},
+OPTkey = {•},
+volume = {427},
+OPTnumber = {4},
+pages = {530-533},
+OPTmonth = {•},
+OPTnote = {•},
+OPTannote = {•}
+}
+
+@Article{Cassidy,
+author = {Cassidy, J.F.},
+title = {Numerical experiments in broadband receier function analysis},
+journal = {Bulletin of the Seismological Society of America},
+year = {1992},
+OPTkey = {•},
+volume = {82},
+number = {3},
+pages = {1453-1474},
+month = {June},
+OPTnote = {•},
+OPTannote = {•}
+}
+
+@Article{Langston1,
+author = {Langston, C. and Hammer, J.},
+title = {The Vertical Component P-Wave Receiver Function},
+journal = {Bulletin of the Seismological Society of America},
+year = {2001},
+OPTkey = {•},
+volume = {91},
+number = {6},
+pages = {1805-1819},
+month = {December},
+OPTnote = {•},
+OPTannote = {•}
+}
+
+@article{Rosa,
+title = "Thin crust beneath the Chaco-Paraná Basin by surface-wave tomography ",
+journal = "Journal of South American Earth Sciences ",
+volume = "66",
+number = "",
+pages = "1 - 14",
+year = "2016",
+note = "",
+issn = "0895-9811",
+doi = "http://dx.doi.org/10.1016/j.jsames.2015.11.010",
+url = "http://www.sciencedirect.com/science/article/pii/S0895981115300900",
+author = "María Laura Rosa and Bruno Collaço and Marcelo Assumpção and Nora Sabbione and Gerardo Sánchez",
+keywords = "Surface wave tomography",
+keywords = "South America",
+keywords = "Crust",
+keywords = "Chaco-Paraná basin "
+}
+
+@article{Chulick,
+title = "Seismic structure of the crust and uppermost mantle of South America and surrounding oceanic basins ",
+journal = "Journal of South American Earth Sciences ",
+volume = "42",
+number = "",
+pages = "260 - 276",
+year = "2013",
+note = "",
+issn = "0895-9811",
+doi = "http://dx.doi.org/10.1016/j.jsames.2012.06.002",
+url = "http://www.sciencedirect.com/science/article/pii/S0895981112000685",
+author = "Gary S. Chulick and Shane Detweiler and Walter D. Mooney",
+keywords = "Crustal structure",
+keywords = "Seismic velocity",
+keywords = "South America "
+}
+
+@article{Heit,
+title = "More constraints to determine the seismic structure beneath the Central Andes at 21°S using teleseismic tomography analysis ",
+journal = "Journal of South American Earth Sciences ",
+volume = "25",
+number = "1",
+pages = "22 - 36",
+year = "2008",
+note = "",
+issn = "0895-9811",
+doi = "http://dx.doi.org/10.1016/j.jsames.2007.08.009",
+url = "http://www.sciencedirect.com/science/article/pii/S0895981107001125",
+author = "B. Heit and I. Koulakov and G. Asch and X. Yuan and R. Kind and I. Alcocer-Rodriguez and S. Tawackoli and H. Wilke",
+keywords = "Central Andes",
+keywords = "Altiplano",
+keywords = "P-Waves",
+keywords = "Teleseismic tomography",
+keywords = "Velocity anomalies",
+keywords = "Lithospheric structure "
+}
+
+@article{Feng2004,
+title = "Group-velocity tomography and lithospheric S-velocity structure of the South American continent ",
+journal = "Physics of the Earth and Planetary Interiors ",
+volume = "147",
+number = "4",
+pages = "315 - 331",
+year = "2004",
+note = "",
+issn = "0031-9201",
+doi = "http://dx.doi.org/10.1016/j.pepi.2004.07.008",
+url = "http://www.sciencedirect.com/science/article/pii/S0031920104002924",
+author = "Mei Feng and Marcelo Assumpção and Suzan Van der Lee",
+keywords = "Surface wave tomography",
+keywords = "Group-velocity",
+keywords = "Lithosphere",
+keywords = "S-velocity",
+keywords = "South American continent "
+}
+@article{Ward,
+title = "Seismic imaging of the magmatic underpinnings beneath the Altiplano-Puna volcanic complex from the joint inversion of surface wave dispersion and receiver functions ",
+journal = "Earth and Planetary Science Letters ",
+volume = "404",
+number = "",
+pages = "43 - 53",
+year = "2014",
+note = "",
+issn = "0012-821X",
+doi = "http://dx.doi.org/10.1016/j.epsl.2014.07.022",
+url = "http://www.sciencedirect.com/science/article/pii/S0012821X14004725",
+author = "Kevin M. Ward and George Zandt and Susan L. Beck and Douglas H. Christensen and Heather McFarlin",
+keywords = "surface waves",
+keywords = "receiver functions",
+keywords = "seismic tomography",
+keywords = "joint inversion",
+keywords = "central Andes",
+keywords = "crustal structure "
+}
+@article{Masson,
+title = "Local earthquake tomography of the Andes at 20°S: Implications for the structure and building of the mountain range ",
+journal = "Journal of South American Earth Sciences ",
+volume = "13",
+number = "1–2",
+pages = "3 - 19",
+year = "2000",
+note = "",
+issn = "0895-9811",
+doi = "http://dx.doi.org/10.1016/S0895-9811(00)00009-2",
+url = "http://www.sciencedirect.com/science/article/pii/S0895981100000092",
+author = "Frédéric Masson and Catherine Dorbath and Claude Martinez and Gabriel Carlier"
+}
+@article{Heintz,
+title = "Upper mantle structure of the South American continent and neighboring oceans from surface wave tomography ",
+journal = "Tectonophysics ",
+volume = "406",
+number = "1–2",
+pages = "115 - 139",
+year = "2005",
+note = "",
+issn = "0040-1951",
+doi = "http://dx.doi.org/10.1016/j.tecto.2005.05.006",
+url = "http://www.sciencedirect.com/science/article/pii/S0040195105002052",
+author = "Maggy Heintz and Eric Debayle and Alain Vauchez",
+keywords = "Upper mantle",
+keywords = "Tomography",
+keywords = "Surface wave higher modes",
+keywords = "South American continent",
+keywords = "Cratonic roots",
+keywords = "Subduction "
+}
+@article{Bianchi,
+title = "Teleseismic tomography of the southern Puna plateau in Argentina and adjacent regions ",
+journal = "Tectonophysics ",
+volume = "586",
+number = "",
+pages = "65 - 83",
+year = "2013",
+note = "Recent Megathrust Earthquakes and Tsunamis: Observations and Processes ",
+issn = "0040-1951",
+doi = "http://dx.doi.org/10.1016/j.tecto.2012.11.016",
+url = "http://www.sciencedirect.com/science/article/pii/S0040195112007433",
+author = "M. Bianchi and B. Heit and A. Jakovlev and X. Yuan and S.M. Kay and E. Sandvol and R.N. Alonso and B. Coira and L. Brown and R. Kind and D. Comte",
+keywords = "Central Andes",
+keywords = "Puna plateau",
+keywords = "Teleseismic tomography",
+keywords = "Arc and back-arc volcanoes",
+keywords = "Velocity anomalies",
+keywords = "Lithospheric structure "
+}
+@article{Dorbath1,
+title = "Local earthquake tomography of the Altiplano and the Eastern Cordillera of northern Bolivia ",
+journal = "Tectonophysics ",
+volume = "259",
+number = "1–3",
+pages = "117 - 136",
+year = "1996",
+note = "Geodynamics of The Andes ",
+issn = "0040-1951",
+doi = "http://dx.doi.org/10.1016/0040-1951(95)00052-6",
+url = "http://www.sciencedirect.com/science/article/pii/0040195195000526",
+author = "Catherine Dorbath and Michel Granet"
+}
+@article{Dorbath2,
+title = "Composition of the crust and upper-mantle in the Central Andes (19°30′S) inferred from P wave velocity and Poisson's ratio ",
+journal = "Tectonophysics ",
+volume = "327",
+number = "3–4",
+pages = "213 - 223",
+year = "2000",
+note = "",
+issn = "0040-1951",
+doi = "http://dx.doi.org/10.1016/S0040-1951(00)00170-0",
+url = "http://www.sciencedirect.com/science/article/pii/S0040195100001700",
+author = "C Dorbath and F Masson",
+keywords = "Poisson's ratio",
+keywords = "Andean chain",
+keywords = "asthenospheric wedge "
+}
+
+@article{Myers,
+  title={Lithospheric-scale structure across the Bolivian Andes from tomographic images of velocity and attenuation for P and S waves},
+  author={Myers, Stephen C and Beck, Susan and Zandt, George and Wallace, Terry},
+  journal={Journal of Geophysical Research: Solid Earth},
+  volume={103},
+  number={B9},
+  pages={21233--21252},
+  year={1998},
+  publisher={Wiley Online Library}
+}
+
+@article{Swenson,
+  title={Crustal structure of the Altiplano from broadband regional waveform modeling: implications for the composition of thick continental crust},
+  author={Swenson, Jennifer L and Beck, Susan L and Zandt, George},
+  journal={Journal of Geophysical Research: Solid Earth},
+  volume={105},
+  number={B1},
+  pages={607--621},
+  year={2000},
+  publisher={Wiley Online Library}
+}
+
+@article{Baumont1,
+  title={Inversion of Pn travel times for lateral variations of Moho geometry beneath the Central Andes and comparison with the receiver functions},
+  author={Baumont, David and Paul, Anne and Zandt, George and Beck, Susan L},
+  journal={Geophysical research letters},
+  volume={28},
+  number={8},
+  pages={1663--1666},
+  year={2001},
+  publisher={Wiley Online Library}
+}
+
+@article{Baumont2,
+  title={Lithospheric structure of the central Andes based on surface wave dispersion},
+  author={Baumont, David and Paul, Anne and Zandt, George and Beck, Susan L and Pedersen, Helle},
+  journal={Journal of Geophysical Research: Solid Earth},
+  volume={107},
+  number={B12},
+  year={2002},
+  publisher={Wiley Online Library}
+}
+
+@article{Zandt,
+  title={Seismic detection and characterization of the Altiplano-Puna magma body, central Andes},
+  author={Zandt, George and Leidig, Mark and Chmielowski, Josef and Baumont, David and Yuan, Xiaohui},
+  journal={Pure and Applied Geophysics},
+  volume={160},
+  number={3-4},
+  pages={2289--2306},
+  year={2003},
+  publisher={Springer}
+}
+
+@article{Biryol,
+  title={Imaging the shallow crust with local and regional earthquake tomography},
+  author={Biryol, Cemal and Leahy, Garrett, and Zandt, George and Beck, Susan},
+  journal={Journal of Geophysical Research: Solid Earth},
+  volume={118},
+  OPTnumber={B1},
+  year={2013},
+  pages={789--807},
+  publisher={Wiley Online Library}
+}
+
+@article{Leidig,
+  title={Modeling of highly anisotropic crust and application to the Altiplano-Puna volcanic complex of the central Andes},
+  author={Leidig, Mark and Zandt, George},
+  journal={Journal of Geophysical Research: Solid Earth},
+  volume={108},
+  number={B1},
+  year={2003},
+  publisher={Wiley Online Library}
+}
+
+@Article{Langston2,
+author = {Langston, C.},
+title = {Structure Under Mount River, Washington, Inferred from Teleseismic Body Waves},
+journal = {Journal of Geophysical Research},
+year = {1979},
+OPTkey = {•},
+volume = {84},
+number = {B9},
+pages = {4749-4762},
+OPTmonth = {•},
+OPTnote = {•},
+OPTannote = {•}
+}
+
+@MastersThesis{Thiago,
+author = {Thiago Nobre Costa},
+title = {Estudo de espessura sedimentar na Bacia do Paraná com função do receptor de alta frequência},
+school = {Universidade de São Paulo},
+year = {2006},
+OPTkey = {•},
+OPTtype = {•},
+OPTaddress = {•},
+OPTmonth = {•},
+OPTnote = {•},
+OPTannote = {•}
+}
+
+@Manual{Herrmann,
+title = {Surface Waves, Receier Functions and Crustal Structure},
+OPTkey = {•},
+author = {Herrmann, R. and Ammon, C.},
+OPTorganization = {•},
+OPTaddress = {•},
+OPTedition = {•},
+OPTmonth = {•},
+year = {2002},
+OPTnote = {•},
+OPTannote = {•}
+}
+
+@Article{Owens1984,
+author = {Owens, T. and Zand, G. and Taylor, S.},
+title = {Seismic Evidence for an Ancient Rift Beneath the Cumberland Plateau, Tennessee: A Detailed Analysis of Broadband Teleseismic P Waveforms},
+journal = {Journal of Geophysical Research},
+year = {1984},
+OPTkey = {•},
+volume = {89},
+number = {B9},
+pages = {7783-7795},
+OPTmonth = {•},
+OPTnote = {•},
+OPTannote = {•}
+}
+
+@Article{Kennett91,
+author = {Kennett, B. L. N. and Engdahl, E.R.},
+title = {Traveltimes for global earthquake location and phases identification},
+journal = {Geophysical Journal International},
+year = {1991},
+OPTkey = {•},
+volume = {105},
+OPTnumber = {•},
+pages = {429-465},
+OPTmonth = {•},
+OPTnote = {•},
+OPTannote = {•}
+}
+
+@Article{PREM,
+author = {Dziewonski, A. and Anderson, D.},
+title = {Preliminary reference Earth model},
+journal = {Physics of the Earth and Planetary Interiors},
+year = {1981},
+OPTkey = {•},
+volume = {25},
+OPTnumber = {•},
+pages = {297-356},
+OPTmonth = {•},
+OPTnote = {•},
+OPTannote = {•}
+}
+
+@Article{CPS,
+author = {Herrmann, R.},
+title = {Computer Programs in Seismology: An Evolving Tool for Instruction and Research},
+journal = {Seismological Research Letters},
+year = {2013},
+OPTkey = {•},
+volume = {84},
+number = {6},
+pages = {1081-1088},
+OPTmonth = {•},
+OPTnote = {•},
+OPTannote = {•}
+}
+
+@Article{AssumpcaoBrazil,
+author = {Assumpção, M. and Bianchi, M. and Julià, J. and Dias, F. and Sand, G. and Nascimento, R. and Drouet, S. and Pavão, C. and Farrapo, D. and Lopes, A.},
+title = {Crustal thickness map of Brazil: Data compilation and main features},
+journal = {Journal of South American Earth Science},
+year = {2013},
+OPTkey = {•},
+volume = {43},
+OPTnumber = {•},
+pages = {74-85},
+OPTmonth = {•},
+OPTnote = {•},
+OPTannote = {•}
+}
+
+@Article{Assumpcao2002,
+author = {Assumpção, M. and James, D. and Snoke, A.},
+title = {Crustal thickness in SE Brazilian Shield by receiver function analysis: Implicarions for isostatic compensation},
+journal = {Journal of Geophysical Research},
+year = {2002},
+OPTkey = {•},
+volume = {107},
+number = {B1,2006},
+OPTpages = {•},
+OPTmonth = {•},
+OPTnote = {•},
+OPTannote = {•}
+}
+
+@Article{Julia2008,
+author = {Juliá, J. and Assumpção, M. and Rocha, M.},
+title = {Deep crustal structure of the Paraná Basin from Receiver functions and Rayleigh-wave dispersion: Evidence for a fragmented cratonic root},
+journal = {Journal of Geophysical Research},
+year = {2008},
+OPTkey = {•},
+volume = {113},
+number = {B08318},
+OPTpages = {•},
+OPTmonth = {•},
+OPTnote = {•},
+OPTannote = {•}
+}
+
+@Article{Julia2000,
+author = {Julià, J. and Ammon, C. and Herrmann, R. and Correig, A.},
+title = {Joint inversion of receiver function and surface wave dispersion observations},
+journal = {Geophys. J. Int.},
+year = {2000},
+OPTkey = {•},
+volume = {143},
+OPTnumber = {•},
+pages = {99-112},
+OPTmonth = {•},
+OPTnote = {•},
+OPTannote = {•}
+}
+
+@Article{Lloyd,
+author = {Lloyd, S. and Van der Lee, S. and Sand, G. and Assumpção, M.},
+title = {Moho map of South America from receiver functions and surface waves},
+journal = {Journal of Geophysical Research},
+year = {2010},
+OPTkey = {•},
+volume = {115},
+number = {115},
+pages = {B11315},
+OPTmonth = {•},
+OPTnote = {•},
+OPTannote = {•}
+}
+
+@Book{Fowler,
+author = {Fowler, C. M. R.},
+ALTeditor = {Fowler,C.},
+title = {The Solid Earth: An introduction to Global Geophysics},
+publisher = {Cambridge University Press},
+year = {2005},
+OPTkey = {•},
+OPTvolume = {•},
+OPTnumber = {•},
+OPTseries = {•},
+OPTaddress = {•},
+edition = {Second Edition},
+OPTmonth = {•},
+OPTnote = {•},
+OPTannote = {•}
+}
+
+
+@Article{Beck2002,
+author = {Beck, S. and Zandt, G.},
+title = {The nature of orogenic crust in the central Andes},
+journal = {Journal of Geophysical Research - Solid Earth},
+year = {2002},
+OPTkey = {•},
+volume = {107},
+number = {B10},
+OPTpages = {•},
+OPTmonth = {•},
+OPTnote = {•},
+OPTannote = {•}
+}

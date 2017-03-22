@@ -1,0 +1,497 @@
+% Packages
+% elsarticle
+
+\documentclass[a4paper,12pt]{elsarticle}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[utf8]{inputenc}
+\usepackage[brazilian]{babel}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage[font=it, format=hang, skip=0pt]{caption}
+\usepackage{listings}
+\usepackage{setspace}
+\usepackage{float}
+\usepackage{subfloat}
+\usepackage{textcomp}
+\usepackage{pdflscape}
+\usepackage{subfigure}
+\usepackage{natbib}
+\usepackage{pifont}
+\addtolength{\topmargin}{-2cm}
+\addtolength{\textheight}{2cm}
+\onehalfspacing
+\usepackage{longtable}
+
+% Environment
+
+\title{Relatorio de atividades 1}
+\author{Carolina Rivadeneyra Vera}
+
+\begin{document}
+
+\pagenumbering{gobble}
+\newpage
+\pagenumbering{arabic}
+\pagestyle{plain}
+
+\tableofcontents
+%\listoffigures
+%\listoftables
+\newpage
+
+\section{\normalsize PROBLEMA DE INVESTIGAÇÃO}
+
+%\subsection{Objetivo principal}
+Calcular a espessura crustal no Brasil a partir da inversão conjunta de funções do receptor de sismos profundos e curvas de dispersão de ondas de superfície, para logo aplicar a metodologia como os dados das estações da Bolívia.
+
+%\subsection{Objetivos específicos}
+%\begin{itemize}
+%\item 1.
+
+%\item 2.
+
+%\item 3. 
+%\end{itemize}
+
+\section{\normalsize REVISÃO BILBIOGRÁFICA}
+\subsection{\textbf{Descontinuidade da Mohorovičić}}
+Também conhecida como descontinuidade de Moho, representa o limite entre a crosta inferior e o manto superior, que pode variar entre 30 e 70 km no continente e entre 6 e 10 km no oceano. Nesta descontinuidade as ondas sísmicas sofrem uma mudança abrupta de velocidade devido às mudanças químicas das rochas, por exemplo a velocidade da onda P (Vp) varia de $\backsim$6.2 km/s na crosta a $\backsim$8 km/s no manto superior \citep{Fowler}. A profundidade da Moho é um parâmetro muito importante na caraterização da estrutura da crosta e está muito relacionada à evolução tectônica de uma região. 
+
+\subsection{\textbf{Função do Receptor}}
+
+Na propagação de uma onda P, quando o ângulo de incidência é pequeno a onda P incide verticalmente e quase não é alterada ao percorrer as camadas, deste modo o registro na componente vertical do registro pode ser considerado como uma aproximação da onda P incidente na base das camadas \citep{Thiago}. Ao passar por diferentes camadas com contrastes de velocidades, esta se converte em uma onda SV, permitindo registrar as características das camadas sob a estação que são registradas principalmente na componente radial \citep{Herrmann}. 
+
+\medskip
+A função do receptor é obtida pela deconvolução da componente radial e transversal pela componente vertical, isolando desta forma a resposta da estrutura sob a estação de outros fatores, e conseguido obter as caraterísticas mais importantes da estrutura da crosta e do manto superior \citep{Owens1984}. Como já dito, a função do receptor da componente radial contem informação sobre a estrutura da crosta embaixo de uma estação, a energia dominante desta componente provem da conversão da onda P para S. Devido ao alto contraste de velocidades entre a crosta e o manto superior, geralmente a conversão da onda P para S (Ps) na descontinuidade de Moho é o maior sinal depois da onda P direta \citep{Kanamori}. Entre tanto a componente tangencial da função do receptor pode fornecer informação adicional, já em ausência de anisotropia ou estruturas inclinadas não deveria conter energia \citep{Ryan}.
+
+\medskip
+Um dos métodos mais comuns de obtenção da função do receptor é realizar a deconvolução no domínio da frequência usando divisão espectral com a estabilização de nível de àgua, entre tanto também se tem utilizado abordagens no domínio do tempo. Quando uma boa quantidade de dados estão disponíveis e o valor da razão sinal-ruído e alto, qualquer um dos métodos pode ser utilizado. Mas quando a quantidade de dados é limitada ou a razão sinal-ruido é baixa, é preciso escolher um dos métodos para obter os melhores resultados. \cite{Ligorria} abordaram a deconvolução no domínio do tempo obtendo bons resultados, para períodos longos a estabilidade do método é visível na amplitude das primeiras chegadas. Além disso o ruído que apresentavam as deconvoluções no domínio da frequência não aparecem nos resultados com a abordagem do domínio do tempo.
+
+\medskip
+No método de equalização da fonte do \cite{Langston2}, no domínio do tempo, o deslocamento teórico do chão em resposta à onda incidente P que incide várias camadas pode ser representado por:
+
+\begin{equation}
+\begin{split}
+&D_V(t)= I(t)\ast S(t)\ast E_V(t) \\
+\\
+&D_R(t)= I(t)\ast S(t)\ast E_R(t) \\
+\\
+&D_T(t)= I(t)\ast S(t)\ast E_T(t) 
+\end{split}
+\end{equation}
+ 
+onde S(t) é a função do tempo da fonte, I(t) é a resposta do instrumento, e 
+$E_V$(t), $E_R$(t), and $E_T$(t) são as respostas da estrutura nas componentes vertical, tangencial e radial respetivamente.
+
+\medskip
+
+Observações feitas em dados de telesismos mostram que na componente vertical, o deslocamento do chão pode se representar como uma função de tempo do pulso convolvida com a resposta do instrumento. Cálculos teóricos para estruturas de crosta típicas mostram que as reverberações da crosta e as fases convertidas na componente vertical são menores, ainda mais se existe um alto contraste de velocidades entre as camadas. Quando as ondas P chegam com um ângulo de incidência próximo à vertical, a resposta da estrutura ($E_R$(t)) gera na componente vertical um pico no tempo de chegada da fase P e outros picos menores nas reverberações, então durante o tempo entre as chegadas das fases convertidas é possível considerar:
+
+\begin{equation}
+ E_R(t)= \delta(t)
+\end{equation}
+
+E sabendo que $\delta$(t) é o elemento neutro da convolução, se tem:
+
+\begin{equation}
+D_V(t)\simeq I(t)\ast S(t)
+\end{equation}
+
+Onde se assume que $D_V$(t) tem um comportamento como uma função delta de Dirac. Supondo que a resposta do instrumento é a mesma nas três componentes, o sismograma na componente vertical representa a fonte e todos os efeitos ao longo do percurso menos a estrutura próxima à estação. Das componentes horizontais ($E_R$(t) e $E_T$(t)), pode se isolar a resposta da estrutura da crosta deconvolvendo-as pela componente vertical. No domínio da frequência, temos:
+
+\begin{equation}
+\begin{split}
+&E_R(\omega)= \frac{D_R(\omega)}{I(\omega)S(\omega)}\simeq \frac{D_R(\omega}{D_V(\omega)} \\
+\\
+&E_T(\omega)= \frac{D_T(\omega)}{I(\omega)S(\omega)}\simeq \frac{D_T(\omega}{D_V(\omega)}
+\end{split}
+\end{equation}
+
+As deconvoluções obtidas depois são transformadas novamente para o domínio do tempo. A parte mais importante deste método é que a informação de fase é conservada, alias as series de tempo resultantes podem ser interpretadas diretamente como um sismograma, examinando as amplitudes e os tempos de chegada das ondas, permitindo uma interpretação menos ambígua.
+  
+\medskip
+O precedimento da deconvolução da equação (4) é numericamente instável devido a que os sinais são de banda limitada é tem presença de ruído numérico. Para evitar estas limitações a deconvolução estimada é multiplicada pela transformada de um pulso Gaussiano, para limitar a banda de frequências e excluir altas frequências que não estavam presentes nos dados originais. Uma vantagem é que primeiro se define as grandes amplitudes e logo os detalhes, cuja resolução vai ser definida pelo filtro gaussiano.
+
+\medskip
+O tempo entre a chegada da fase P e a Ps pode ser usada para estimar a espessura crustal (Equação 5), para isso é necessário conhecer as velocidades médias da crosta.
+
+\begin{equation}
+H= \frac{T_Ps}{\sqrt{\frac{1}{V_s^2}-p^2}-\sqrt{\frac{1}{V_p^2}-p^2}}
+\end{equation}
+
+onde:
+
+\begin{itemize}
+\item H é a espessura da crosta;
+\item $T_Ps$ é a diferencia de tempo de chegada da onda P direta e a conversão Ps;
+\item $V_p$ é a velocidade média da onda P na crosta;
+\item $V_s$ é a velocidade média da onda S na crosta;
+\item p é o parametro de raio da onda incidente.
+\end{itemize}
+ 
+\medskip
+Uma vantagem desse método é que como o ponto da conversão da P para S é próximo da estação (menos de 10 km de distância lateral), a estimação é menos afetada pelas variações laterais \citep{Kanamori}.
+
+\medskip
+A dependência da espessura crustal (H) com a velocidade da onda P ($V_p$) não é tão forte quanto a dependência da velocidade da onda S ($V_s$). Para reduzir essa incerteza, se usa as fases posteriores que fornecem informação adicional  \citep{Kanamori}. 
+
+\begin{equation}
+H= \frac{T_PpPs}{\sqrt{\frac{1}{V_s^2}-p^2} + \sqrt{\frac{1}{V_p^2}-p^2}}
+\end{equation}
+\medskip
+\begin{equation}
+H= \frac{T_PpSs+PsPs}{2* \sqrt{\frac{1}{V_s^2}-p^2}}
+\end{equation}
+
+Então, a partir das equações (6) e (7) é possível estimar os valor de k ($V_p$ / $V_s$) e a espessura da crosta H.
+
+\medskip
+Geralmente estimar a profundidade da Moho a partir da fase Ps e suas fases posteriores, em uma única função do receptor pode ser complicado devido à interferência de ruído, outras camadas e heterogeneidades na crosta. Por isso se usam funções de receptor de vários eventos para o empilhamento e dessa forma melhorar a razão sinal-ruído.
+
+\medskip
+Este empilhamento é realizado geralmente no domínio do tempo para um grupo de eventos, \cite{Kanamori} propus uma forma de empilhamento definido como:
+
+\begin{equation}
+s(H,\kappa)= \omega_1 r(t_1)+ \omega_2 r(t_2) - \omega_3 r(t_3)
+\end{equation}
+
+onde r(t) é a função do receptor da componente radial, $t_1$, $t_2$ e $t_3$ são os tempos de chegada previstos para as fases Ps, PpPs e PpSs+PsPs, para uma espessura H e razão Vp/Vs (k), calculados através das equações (5), (6) e (7).
+
+\medskip
+Os pesos $\omega_1$, $\omega_2$ e $\omega_3$ devem somar sempre um, tendo um peso maior a fase Ps, já que tem uma amplitude maior do que as outras.
+
+
+\subsection{\textbf{Modelos de espessura crustal}}
+
+Vários Modelos de espessura crustal da América inteira já foram feitos, entre tanto estes não descreveram a detalhe a estrutura da crosta. Um dos modelos mais recentes foi desenvolvido por \cite{Assumpcao}, no qual analisaram dados de refração sísmica, função do receptor e dispersão de ondas de superfície para desenvolver modelos crustais na América do Sul. Os resultados mostram uma crosta mais espessa nos Andes, atingindo 75 km na parte sul do Peru e no Altiplano boliviano, enquanto que no Equador, na Colômbia, e os Andes do Chile e da Argentina a profundidade da Moho é $\sim$40 km, mais próxima da média global continental. Entanto, na parte estável do continente, a espessura média é aproximadamente 38 km, sendo um pouco mais espessa no cratón Amazónico, cratón São Francisco e na bacia intracratónica de Paraná.
+
+\medskip
+\cite{Chulick} compilou dados da estrutura da crosta e do manto superior da América do Sul e dos oceanos ao redor, que inclui dados sísmicos de refração e reflexão, ondas de superfície, função do receptor e tomografia de sismos locais. Os resultados mostram uma espessura da crosta maior do que 60 km no Altiplano (desde o centro-sul do Peru - oeste da Bolívia - norte do Chile), também no centro do Chile apresenta uma espessura crustal maior do que 50 km. Na parte de Brasil indica uma crosta maior de 40 km (escudo Brasiliano) afinando-se para o oeste. Além disso, também obtiveram velocidades médias da onda P na crosta, apresentando maior velocidade ($\sim$ > 6.5 km/s) nas áreas mais espessas; e uma velocidade média da onda P no manto (Pn) de 8.00 km/s, sendo um pouco menor sob os Andes (devido ao processo de subducção).
+
+\medskip
+Além dos modelos crustais da América do Sul já ditos, vários estudos foram desenvolvidos a escala local na parte dos Andes, um dos mais recentes é apresentado por \cite{Ryan}, eles usaram dados do projeto CAUGHT(The Central Andean Uplift and Geodynamics of High Topography) de dois anos (2010-212), de uma aquisição de 50 sismômetros instalados na parte noroeste da Bolívia e do sul do Peru. Com esses dados calcularam funções de receptor de telesismos, e conjuntamente com dados de estudos anteriores, obtiveram caraterísticas mais detalhadas da estrutura da crosta e manto superior nos Andes Centrais. A profundidade da Moho que encontraram está entre 40 km e 75 km, sendo mais profunda na cordilheira oeste e Altiplano, e mais fina nos subandes. Além disso foi identificada uma zona de baixa velocidade numa profundidade de 15 km sob na cordilheira oeste, concordando também com estudos já existentes; também foram encontradas duas áreas na cordilheira leste com crosta mais fina do que esperado, provavelmente pela erosão.
+
+\medskip
+Existem outros estudos feitos nos Andes, os quais apresentam resultados concordantes com \cite{Ryan}. \cite{Masson} determinou as velocidades das ondas P e as profundidades da Moho para os Andes Centrais num perfil que atravessa os Andes desde a Cordilheira Costeira até a zona subandina, calculando uma espessura da crosta que varia entre 47 km (na parte da costeira e leste da cordilheira) e 70 km na parte da Cordilheira oeste. Estes resultados também concordam com outros estudos \citep{Beck2002}.
+
+
+\newpage
+\section{\normalsize RESULTADOS INICIAIS - FUNÇÃO DO RECEPTOR NO ACRE}
+
+A estrutura crustal é um parâmetro muito importante em estudos sísmicos regionais e globais. Apesar de existirem trabalhos sobre a espessura da crosta  na região do Brasil, ainda não se tem um conhecimento detalhado da estrutura crustal de regiões específicas. Isto como consequência de usar dados telesísmicos, que tem pouco conteúdo de frequências e oferecem pouca resolução das camadas mais superficiais da crosta, como por exemplo as bacias sedimentares e as interfases inter crustais.  
+
+\subsection{\textbf{Dados}}
+
+Com o objetivo de obter informação mais detalhada da estrutura crustal no Brasil, se procuraram eventos profundos com magnitude superior a 4.0 para realizar a função do receptor. No catálogo do Centro de Sismologia da Universidade de São Paulo se fez uma busca de eventos com hipocentros entre 350 e 750 km, acontecidos entre os anos 2010 e 2016, que estejam registrados nas estações da Rede Sismográfica Brasileira (RSBR) e que a distância entre evento-estação não fosse maior a 30$^\circ$.
+
+\medskip
+Se encontraram 47 sismos profundos com hipocentro entre 350 e 655 km de profundidade e magnitudes entre 4.1 e 7.6. A maioria destes eventos ocorreram na região do Acre (limite entre Peru e Brasil), e unos poucos na região da Bolívia, como mostra a Figura \ref{fig eventos}. Os parâmetros dos eventos são apresentados na Tabela \ref{tabela:sismos profundos}.
+
+
+\begin{center}
+	\begin{longtable}{|c|c|c|c|c|c|c|}
+		\caption{Sismos profundos \label{tabela:sismos profundos}}\\
+		\hline
+		\textbf{Evento} & \textbf{Data} & \textbf{Hora UTC} & \textbf{Log. ($^		\circ$)} & \textbf{Lat. ($^\circ$)} & \textbf{Prof. (km)} & \textbf{Mag.}\\
+		\hline
+		\endfirsthead
+		\caption[]{Sismos profundos (continuação)}\\
+		\hline
+		\textbf{Evento} & \textbf{Data} & \textbf{Hora UTC} & \textbf{Log. ($^\circ$)} & \textbf{Lat. ($^\circ$)} & \textbf{Prof. (km)} & \textbf{Mag.}\\
+		\hline
+		\endhead
+		\hline
+		\multicolumn{7}{c}{Segue na próxima página.}
+		\endfoot
+		\endlastfoot
+1 &2010-04-15 & 23:34:48 & -71.57 & -8.22 & 635.0 & 4.1 \\
+2 &2010-04-18 & 14:28:47 & -65.24 & -18.06 & 425.7 & 4.6 \\
+3 &2010-04-26 & 23:31:30 & -72.40 & -7.19 & 350.0 & 4.3 \\
+4 &2010-05-22 & 05:48:11 & -69.81 & -13.39 & 600.0 & 4.6 \\
+5 &2010-05-24 & 16:18:28 & -71.64 & -8.12 & 582.1 & 6.5 \\
+6 &2010-09-30 & 23:30:45 & -71.36 & -7.95 & 627.8 & 5.3 \\
+7 &2010-10-30 & 09:54:00 & -71.32 & -8.00 & 626.1 & 4.7 \\
+8 &2010-12-17 & 22:14:26 & -71.52 & -8.58 & 572.9 & 5.2 \\
+9 &2011-06-14 & 08:38:19 & -71.05 & -10.25 & 539.7 & 4.2 \\
+10 &2011-07-17 & 03:08:18 & -70.74 & -11.04 & 500.0 & 4.0 \\
+11 &2011-11-22 & 18:48:16 & -65.16 & -15.31 & 560.3 & 6.6 \\
+12 &2012-10-11 & 22:58:57 & -64.06 & -19.56 & 602.3 & 4.6 \\
+13 &2013-10-29 & 09:50:45 & -71.15 & -9.30 & 635.8 & 4.5 \\
+14 &2014-01-27 & 16:42:37 & -63.92 & -19.26 & 600.2 & 5.6 \\
+15 &2014-04-07 & 15:27:32 & -71.58 & -8.24 & 560.9 & 5.1 \\
+16 &2014-07-22 & 00:53:02 & -72.02 & -6.12 & 564.5 & 4.2 \\
+17 &2014-11-04 & 00:11:56 & -64.06 & -19.32 & 604.6 & 4.3 \\
+18 &2014-11-26 & 01:26:24 & -71.94 & -6.25 & 587.1 & 4.6 \\
+19 &2015-03-28 & 21:48:14 & -71.29 & -9.12 & 610.2 & 4.4 \\
+20 &2015-05-11 & 08:21:44 & -71.23 & -9.15 & 617.3 & 4.0 \\
+21 &2015-10-28 & 17:10:55 & -71.30 & -9.64 & 603.7 & 4.5 \\
+22 &2015-11-24 & 18:10:05 & -71.14 & -10.66 & 595.6 & 4.3 \\
+23 &2015-11-24 & 22:45:38 & -70.94 & -10.54 & 606.2 & 7.5 \\
+24 &2015-11-24 & 22:50:54 & -71.02 & -10.06 & 620.6 & 7.6 \\
+25 &2015-11-24 & 23:44:14 & -70.99 & -10.56 & 595.2 & 4.6 \\
+26 &2015-11-24 & 23:55:20 & -70.87 & -10.29 & 618.8 & 4.1 \\
+27 &2015-11-25 & 00:28:16 & -70.85 & -11.03 & 597.1 & 4.7 \\
+28 &2015-11-25 & 04:30:29 & -71.14 & -10.08 & 589.8 & 4.3 \\
+29 &2015-11-25 & 09:26:22 & -71.38 & -8.53 & 629.3 & 4.7 \\
+30 &2015-11-25 & 11:45:25 & -71.45 & -9.30 & 515.0 & 4.3 \\
+31 &2015-11-25 & 16:19:24 & -71.28 & -9.85 & 630.5 & 4.3 \\
+32 &2015-11-25 & 18:47:56 & -70.54 & -10.40 & 655.0 & 4.3 \\
+33 &2015-11-25 & 23:49:34 & -71.14 & -10.52 & 591.9 & 4.2 \\
+34 &2015-11-26 & 05:45:18 & -71.26 & -9.18 & 602.8 & 6.7 \\
+35 &2015-11-26 & 05:56:05 & -71.32 & -9.06 & 602.6 & 4.9 \\
+36 &2015-11-26 & 06:01:22 & -71.29 & -9.20 & 602.1 & 4.6 \\
+37 &2015-11-26 & 13:42:24 & -71.25 & -9.76 & 605.6 & 4.9 \\
+38 &2015-11-26 & 20:50:46 & -71.18 & -10.57 & 601.8 & 4.2 \\
+39 &2015-11-27 & 00:52:54 & -71.09 & -9.29 & 617.0 & 5.1 \\
+40 &2015-11-29 & 10:41:32 & -71.18 & -10.17 & 625.7 & 4.2 \\
+41 &2015-12-03 & 23:29:48 & -71.42 & -10.26 & 622.7 & 4.0 \\
+42 &2015-12-06 & 13:49:42 & -71.19 & -9.83 & 638.4 & 4.2 \\
+43 &2015-12-19 & 04:25:25 & -71.01 & -11.08 & 601.4 & 4.0 \\
+44 &2016-01-03 & 11:08:34 & -70.78 & -10.78 & 633.4 & 4.3 \\
+45 &2016-01-14 & 03:25:28 & -63.33 & -19.76 & 582.6 & 6.1 \\
+46 &2016-06-03 & 20:17:05 & -63.17 & -19.96 & 583.6 & 4.5 \\
+47 &2016-07-14 & 21:25:16 & -63.86 & -19.41 & 588.4 & 5.1 \\
+\hline 
+
+%\end{tabular}
+%\end{center}
+	\end{longtable}
+\end{center}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\linewidth]{Pic/events.png}
+\singlespace
+\caption[Localização de eventos]{\small 47 eventos profundos com hipocentro entre 350 km e 650 km acontecidos entre os anos 2010 e 2016 no Acre e na Bolívia. Dados do catálogo do Centro de Sismologia da Universidade de São Paulo}
+\label{fig eventos}
+\end{figure}
+
+Os 47 eventos foram registrados em 49 estações da Rede Sismográfica Brasileira (RSBR), as quais são mostradas na Figura \ref{fig estaciones}, como se pode observar os estações se encontram próximas aos eventos, num raio aproximado de 30$^\circ$, oposto com as distâncias geralmente trabalhadas em função do receptor. 
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\linewidth]{Pic/Est.png}
+\singlespace
+\caption[Estações usadas para realizar a função do receptor]{\small Estações das redes BL e BR da Rede Sismográfica Brasileira (RSBR) que registraram os 47 eventos profundos. A distância entre os eventos e as estações é menor de 30$^\circ$.}
+\label{fig estaciones}
+\end{figure}
+
+\subsection{Metodologia}
+
+\subsubsection{Preprocessamento de dados}
+
+Segundo \cite{Ligorria} quando a razão sinal-ruído (SNR) não é muito baixa, as funções do receptor tem boa resolução. Para saber a qualidade dos dados obtidos se calculou a razão sinal-ruído da componente vertical dos sismogramas, com essa finalidade se usou uma janela de 20 segundos antes e depois da chegada da onda direta P para calcular o valor quadrático médio (RMS) da amplitude de cada uma delas, e a divisão do valor de RMS depois da chegada da onda P entre o valor de RMS antes da chegada da onda P é o valor de SNR. A figura \ref{fig SNRall} apresenta o histograma dos valores de SNR de todos os dados, onde se pode observar que a maioria dos dados apresentam um valor de SNR baixo (menor do que um), o que significa que o sinal não é muito diferente ao ruído antes da chegada das ondas.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\linewidth]{Pic/SNRall.png}
+\singlespace
+\caption[Razão sinal-ruído dos sismogramas]{\small Histograma da razão sinal-ruído (SNR) de todos os sismogramas obtidos dos 47 eventos nas 49 estações da rede RSBR (2303 eventos no total). A maioria dos eventos apresentam um sinal menor de 1.}
+\label{fig SNRall}
+\end{figure}
+
+
+No método de função do receptor, como descrito no capítulo 1, se usam dados com distâncias telesísmicas (35$^\circ$ a 90$^\circ$ de distância) devido a que os ângulos de incidência são pequenos e se pode assumir que a onda P na componente vertical quase não foi alterada ao percorrer as diferentes camadas, além que para essas distâncias a onda P não apresenta triplicação, que ocorre entre os 15$^\circ$ e 30$^\circ$ devido a grandes aumentos repentinos de velocidade que tem o manto \citep{Thiago}. Neste caso, devido à profundidade dos eventos, as ondas P chegam com ângulos de incidência similares aos telesismos. Na figura \ref{fig Incident1} mostra os ângulos de incidência teóricos para cada evento-estação, calculados com o modelo IASPEI 91, além se mostram os ângulos de incidência teóricos para eventos superficiais de distâncias de 35$^\circ$, 60$^\circ$ e 90$^\circ$, observando que os ângulos de incidência dos sismos profundos não apresentam diferencias consideráveis com os dados normalmente trabalhados.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\linewidth]{Pic/Incident1.png}
+\singlespace
+\caption[Ângulo de incidência dos eventos]{\small Ângulo de incidência teórico segundo o modelo IASPEI 91 dos 47 eventos para cada uma das 49 estações (2303 no total). A escala de cores representa a profundidade dos eventos. A linha vermelha representa o ângulo de incidência teórico para um evento superficial a 90$^\circ$ de distância, a linha azul para um evento superficial a 60$^\circ$ e a linha verde para um evento superficial a 35$^\circ$.}
+\label{fig Incident1}
+\end{figure}
+
+Um detalhe que chama a atenção na Figura \ref{fig Incident1} é que eventos que tem quase a mesma distância e profundidade apresentam ângulos de incidência bem diferentes, isso porque ao momento de fazer o cálculo do ângulo de incidência teórico se considerou a primeira chegada, e aqueles eventos que apresentam triplicação da onda P tem mais do que uma chegada, cada uma com diferentes ângulos de incidência e tempos bem próximos.
+
+\medskip
+Na Figura \ref{fig fases.triplicacion} mostra para quais distâncias e profundidades a onda P apresenta triplicação, segundo os modelos IASPEI 91 e PREM. No caso do modelo PREM, ao ser um modelo unidimensional e não considerar a anisotropia transversal do manto superior \citep{PREM}, apresenta triplicações numa área maior do que o modelo IASPEI 91, que sim considera um gradiente linear de velocidade no manto superior \citep{Kennett91}.
+
+\medskip
+Com a finalidade de descartar os dados com triplicações da onda P, se usou o modelo IASPEI 91, que representa melhor a estrutura da velocidade do manto superior, e se descartaram todos os dados que apresentavam triplicação da onda P. 
+
+\begin{figure}[H]
+\centering
+\subfigure[Modelo IASPEI91]{\includegraphics[width=0.5\linewidth]{Pic/fasesIASPEI.png}}
+\subfigure[Modelo PREM]{\includegraphics[width=0.5\linewidth]{Pic/fasesPREM.png}}
+\caption{\small Modelo de triplicação onda P com a distância e a profundidade. A cor azul representa a área onde uma única chegada da onda P, entanto que as cores mais quentes representam mais de uma chegada (triplicação da onda P).}
+\label{fig fases.triplicacion}
+\end{figure}
+
+\subsubsection{Deconvolução de dados}
+
+\cite{Ligorria} realizou deconvoluções no domínio do tempo, para dados com uma baixa razão sinal-ruído, obtendo resultados coerentes. Devido a que a maior parte dos dados apresentam uma baixa razão sinal-ruído se escolheu realizar a deconvolução no domínio do tempo. 
+
+Depois de pre selecionar os para a deconvolução, se removeu a tendencia deles como o programa SAC e se passou um filtro passa banda com frequências entre 0.07 Hz e 10 Hz para melhorar o sinal.Para levar a cabo as deconvoluções se usou o programa \textit{saciterd} do pacote de Herrmman, que realiza a deconvolução iterativa no domínio de tempo \citep{CPS}. As funções do receptor foram calculadas usando janelas de tempo de 40 e 60 segundos e pulsos gaussianos de 2.5, 5 e 10 Hz. Se realizaram 500 iterações no processo e se considerou uma janela de 10 segundos antes da chegada da onda P.
+
+\medskip
+A Figura \ref{fig RFall} mostra o resultado das deconvoluções para a estação AQDB, onde se pode observar que muitos dos traços não resultaram bons para o análise posterior, já que contem muito ruído o ficaram instáveis, não sendo possível reconhecer as ondas diretas P em várias funções do receptor, ainda menos conversões das ondas P para S. Os resultados das outras estações analisadas apresentaram estas mesmas características.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.7\linewidth]{Pic/RFall.png}
+\singlespace
+\caption[ Funções do receptor para a estação AQDB]{\small Funções do receptor para a estação AQDB. Se pode observar que a maioria dos traços ficaram instáveis e/ou com ruido, sendo impossível observar as ondas direta P e consequentemente as fases convertidas na Moho.}
+\label{fig RFall}
+\end{figure}
+
+Para poder trabalhar com as funções do receptor obtidas pela deconvolução, se teve que selecionar manualmente os traços que ficaram bons em todas as estações. Depois dessa seleção, em cada estação ficaram na média de 5 traços bons para o posterior análise. Na Figura \ref{fig RFbons} mostra os traços que ficaram bons para a estação AQDB, onde é possível reconhecer as ondas diretas e a chegada da onda Ps (primeira conversão).
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.7\linewidth]{Pic/RFbons.png}
+\singlespace
+\caption[Funções do receptor selecionadas]{\small Funções do receptor selecionadas manualmente para o análise posterior, se pode observar claramente a chegada da onda direta P, e a conversão da onda P para onda S na Moho ($\backsim$ nos 5 segundos posteriores à chegada da onda P direta). No caso da estação AQDB a maioria dos traços foram descartados, acontecendo no mesmo nas outras estações.}
+\label{fig RFbons}
+\end{figure}
+
+
+\subsection{Resultados}
+
+Para calcular a espessura crustal se utilizou o método H-K stacking desenvolvido por \cite{Kanamori}, o qual estima também a relação Vp/Vs (k). Para os cálculos se usou uma velocidade da onda P (Vp) de 6.4 km/s, e os pesos atribuídos as fases convertidas Ps, PsPs e PpPs+PsSs foram de 0.5, 0.3 e 0.2 respetivamente.
+
+\medskip
+Os resultados das espessuras crustais são mostradas nas Figuras \ref{fig resultados_40} e \ref{fig resultados_60}, onde se pode observar que para frequências mais baixas (2,5 e 5.0 Hz), nas duas janelas de tempo, a espessura crustal não varia muito.Enquanto, para a frequência de 10 Hz os resultados mostram uma crosta mais espessa na parte norte, para as duas janelas de tempo.
+
+\medskip
+Na área do Craton de São Francisco apresentou espessuras crustais ao redor de 41 km aproximadamente, entanto na bacia do Paraná a espessura crustal foi maior do que em outras áreas, atingindo valores de até 45 km, superando a média continental de 38 km; além na bacia do Pantanal apresentou uma crosta mais fina, na média de 36 km. Estes valores concordam com trabalhos realizados anteriormente na área \citep{Assumpcao, AssumpcaoBrazil, Assumpcao2002, Julia2008}. 
+
+\medskip 
+A bacia do Paraná apresenta uma menor elevação, e por isostasia se espera uma crosta mais fina também, Porém esta região apresenta uma crosta mais espessa do que o esperado, esto se deveria possivelmente á uma variação lateral de densidade \cite{AssumpcaoBrazil}.
+
+\medskip 
+Na parte do Craton de São Francisco e do nordeste, os resultados não são muito confiáveis devido à pouca densidade de estações, pelo que os valores de espessura crustal obtidos são resultados do processo de interpolação das estações mais próximas.
+
+
+\begin{figure}[H]
+\centering
+\subfigure[Pulso gaussiano de 2.5Hz.]{\includegraphics[width=0.4\linewidth]{Pic/40_25.png}}
+\subfigure[Pulso gaussiano de 5.0Hz.]{\includegraphics[width=0.4\linewidth]{Pic/40_5.png}}
+\subfigure[Pulso gaussiano 10.0Hz.]{\includegraphics[width=0.4\linewidth]{Pic/40_10.png}}
+\caption{\small Resultados da espessura crustal para a área do Brasil, usando as funções do receptor de uma janela de 40 segundos. Os triângulos representam as estações nas quais se têm dado de espessura crustal. }
+\label{fig resultados_40}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\subfigure[Pulso gaussiano de 2.5Hz.]{\includegraphics[width=0.4\linewidth]{Pic/60_25.png}}
+\subfigure[Pulso gaussiano de 5.0Hz.]{\includegraphics[width=0.4\linewidth]{Pic/60_5.png}}
+\subfigure[Pulso gaussiano de 10.0Hz.]{\includegraphics[width=0.4\linewidth]{Pic/60_10.png}}
+\caption{\small Resultados da espessura crustal para a área do Brasil, usando as funções do receptor de uma janela de 60 segundos. Os triângulos representam as estações nas quais se têm dado de espessura crustal.}
+\label{fig resultados_60}
+\end{figure}
+
+Depois de calcular as espessuras crustais sob as estações com as dois diferentes janelas de tempo, e valores de pulsos gaussiano, se calculou o desvio padrão das espessuras para cada estação, esperando que fosse menor do que um quilometro em todos os casos, já que a metodologia foi a mesma em todos os casos. Os resultados mostram que o valor do desvio padrão para a maioria das estações é menor do que 1 km, mesmo assim também se tem valores altos de $\backsim$4 km, que são as estações a rever para conferir que o analise está certo \ref{fig histDV}. 
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.7\linewidth]{Pic/hist.png}
+\singlespace
+\caption[Histograma do desvio padrão da espessura da crosta]{\small Histograma do desvio padrão da espessura da crosta para cada estação. A maioria das estações apresento um desvio padrão menor do que 1 km, que era o esperado, mas também se tem valores altos de até $\backsim$4 km}
+\label{fig histDV}
+\end{figure}
+
+\subsubsection{Comparação com trabalhos anteriores}
+
+Como já existem estudos anteriores acerca da espessura crustal na região do Brasil, se realizou uma comparação dos resultados obtidos com trabalhos anteriores, no contexto geral os resultados concordam em quanto à áreas mais espessas e finas \citep{Assumpcao, AssumpcaoBrazil, Assumpcao2002, Julia2008}.
+
+\medskip
+Para ter uma noção quantitativa da diferença entre os resultados obtidos e trabalhos anteriores, se fez uma substração das grades do presente trabalho com o modelo desenvolvido por \cite{Assumpcao}, obtendo como resultado a Figura \ref{fig 1comp40_2.5}, onde se pode observar que para a região do Brasil se tem uma variação média de $\pm$ 5 km. Os pontos vermelhos que apresentam variações mais altas são os pontos onde de localizam as estações usadas por \cite{Assumpcao}.  
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\linewidth]{Pic/Model1_40_25.png}
+\singlespace
+\caption[]{\small Mapa da diferença entre os valores de espessura crustal obtidos no presente trabalho com os resultados obtidos por \cite{Assumpcao}. Como as espessuras crustais não variam muito entre as janelas, e entre os pulsos gaussianos de 2.5 Hz e 5 Hz, se considerou os resultados obtido com una janela de 40 segundos e um pulso de 2.5 Hz para fazer a comparação de resultados. Na média as diferenças estão em torno de $\pm$ 5 km.}
+\label{fig 1comp40_2.5}
+\end{figure}
+
+
+
+\newpage 
+\begin{landscape}
+\section{\normalsize PLANO DETALHADO}
+
+\begin{table}[H]
+\begin{center}
+\caption{Plano detalhado de trabalho}
+\label{tabela:plano de trabalho}
+\bigskip
+\doublespacing
+\begin {tabular}{|c|c|c|c|c|c|}
+\hline
+\textbf{Atividade} & \textbf{Jun-2017} & \textbf{Dec-2017} & \textbf{2018} & \textbf{2019} & \textbf{Jun-2020}\\
+\hline
+Pesquisa bibliográfica  & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$\\
+Inversão conjunta com ondas de superfície  & $\checkmark$ &  &  &  & \\
+Resultados finais da estrutura da crosta   & $\checkmark$ &  &  &  & \\
+Redação do artigo científico  & & $\checkmark$  &  &  & \\
+Obtenção de dados das estações da Bolívia &  & $\checkmark$  &  &  & \\
+Resultados preliminares  &  &$\checkmark$ & $\checkmark$ &  & \\
+Redação do artigo científico  &  &  &$\checkmark$  &  & \\
+Exame de qualificação  &  &  & $\checkmark$ &  & \\
+Resultados finais  &  &  & $\checkmark$ & $\checkmark$ & \\
+Redação da tese  &  &  &  & $\checkmark$ & $\checkmark$ \\
+Defesa da tese  &  &  &  &  & $\checkmark$\\
+\hline   
+\end{tabular}
+\end{center}
+\end{table}
+\end{landscape}
+
+\newpage
+\section{\normalsize RESUMO DE ATIVIDADES}
+\subsection{Disciplinas cursadas}
+
+No segundo semestre do ano 2016 cursei a disciplina de Propagação de ondas sísmicas, cujo objetivo é estudar a teoria de propagação de ondas sísmicas com aplicações práticas na determinação de estrutura da crosta e manto superior. A teoria de propagação de ondas sísmicas é a base fundamental para qualquer estudo na área de Sismologia. Esta disciplina, portanto, é necessária para fornecer o embasamento teórico mínimo de qualquer aluno que deseja especialização em Sismologia ou Sísmica de Exploração. 
+
+Na tabela \ref{tabela:disciplinas} é apresentada a disciplina cursada o semestre passado.
+
+\begin{table}[H]
+\begin{center}
+\caption{Disciplinas cursadas}
+\label{tabela:disciplinas}
+\doublespacing
+\begin {tabular}{|c|c|c|c|}
+\hline
+\textbf{Disciplina} & \textbf{Período} & \textbf{Condição} & \textbf{Avaliação} \\
+\hline
+Propagação de ondas sísmicas & 2016-II & Aprovado & B \\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+
+\subsection{Outras atividades}
+
+Monitora dos cursos de verão:
+
+\begin{itemize}
+\item Introdução à Sismologia.
+
+\item Ondas de Superfície.
+
+\item Python como ferramenta numérica.
+
+\end{itemize}
+
+\subsection{Atividades futuras}
+No semestre 2017-I tem projetado:
+
+\begin{itemize}
+\item Cursar a disciplina Geofísica da Placa da América do Sul.
+
+\item Monitora na disciplina AGG0330 - Processamento de Sinais Digitais, curso obrigatório da graduação em Geofísica.
+
+\item Terminar a determinação da espessura crustal dos sismos profundos do Acre, usando inversão conjunta com ondas de superfície.
+
+\item Começar com o processamento dos dados das estações da rede da Bolívia.
+
+\end{itemize}
+
+\newpage
+\section{Referências}
+\bibliographystyle{apa}\biboptions{authoryear}
+\bibliography{bibliografia}
+
+\end{document}
